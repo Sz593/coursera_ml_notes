@@ -1,0 +1,152 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{report} % use larger type; default would be 10pt
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+
+
+\usepackage{amsmath} % AMS Math Package
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb} % Math symbols such as \mathbb
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{color}
+	%To color text, use {\color{#} text here } and the available color options include: white, black, red, 	green, blue, cyan, magenta, yellow
+\usepackage{float} 
+	%For Graphic Placement
+		%h=here, t=top, b=bottom, p=page
+		%to override latex float placement, add an ! after the line to make latex more obedient 
+		%If using the float package, then using H will make latex put the graphic exactly where is it in the source code
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref} 
+	%To link outside a document:
+		%\url{''my url''}: it will show the URL using a mono-spaced font and, if you click on it, your browser will be opened pointing at it.
+		%\href{''my_url''}{''description''}: it will show the string "description" using standard document font but, if you click on it, your browser will be opened pointing at "my_url".
+	%To link inside the document:
+		%\hyperlink{label}{anchor caption}
+		%\hypertarget{label}{link caption}
+
+\usepackage{appendix}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{mdwlist} %use for single spaced lists 
+	%To single space lists, use the package ``mdwlist'' and then just use the commands ennumerate* and itemize* instead of the regular commands.
+
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LaTex Hints and Tricks
+%
+%
+%To gather multiple equations under one number, use \begin{subequations} and \end{subequations} outside of the \begin{equation} or \begin{align}, etc. environment.
+%
+%To label a group of equations together, use the \begin{aligned} and \end{aligned} environments inside of the \begin{equation} and \end{equation} environment
+%
+% Use \numberwithin{x}{y} to number equations, etc. differently. x can be equation, figure, etc. and y can be section, subsection, etc. 
+%
+%Page Numbering
+	%To number pages specifically, use \thispagestyle{empty} to prevent a page (usually the title) 		from being numbered
+	%For frontmatter, use \setcounter{page}{1} and \pagenumbering{roman} to number pages using 		roman numerals
+	%For mainmatter, use \setcounter{page}{1} and \pagenumbering{arabic} to start pages at 1
+%
+%
+%
+%Use the following to label the rows and columns of a matrix
+%$$\bordermatrix{\text{corner}&c_1&c_2&\ldots &c_n\cr
+%                r_1&a_{11} &  0  & \ldots & a_{1n}\cr
+%                r_2& 0  &  a_{22} & \ldots & a_{2n}\cr
+%                r_3& \vdots & \vdots & \ddots & \vdots\cr
+%                r_4& 0  &   0       &\ldots & a_{nn}}$$
+%
+%To get text boxes, use \mbox (for no frame) or \fbox (for a frame)
+%
+%
+%Font Sizes:
+%    \tiny
+%    \scriptsize
+%    \footnotesize
+%    \small
+%    \normalsize
+%    \large
+%    \Large
+%    \LARGE
+%    \huge
+%    \Huge 
+%
+%
+%
+
+
+
+
+%%% The "real" document content comes below...
+
+\title{Notes on Machine Learning  \\ from Andrew Ng's Coursera Course}
+\author{Simon Zahn}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+
+\chapter*{Preface}\addcontentsline{toc}{chapter}{Preface}
+% \ref{chapter:metricdifferentialgeometry} (Metric Differential Geometry)
+
+Hello, this is a preface. 
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\include{./Chapters/1-Introduction}
+\include{./Chapters/2-Linear_Regression}
+\include{./Chapters/3-Logistic_Regression}
+
+
+\appendix
+\include{./Appendix/notation}
+\include{./Appendix/linear_algebra}
+
+\end{document}

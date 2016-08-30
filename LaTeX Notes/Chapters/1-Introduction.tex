@@ -1,0 +1,32 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+Two definitions of Machine Learning are offered at the start of the course:
+\begin{description}
+\item[Arthur Samuel] `The field of study that gives computers the ability to learn without being explicitely programmed.'
+\item[Tom Mitchell] `A computer program is said to learn from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks $T$, as measured by $P$, improves with experience $E$.'
+\end{description}
+
+
+\section{Supervised Learning}
+\label{chapintro-sect:suplearn}
+
+In supervised learning, we have a data set and already know what the correct output should be,  knowing that there is an existing relationship between the input and output. There are two types of supervised learning: \textbf{classification}, and \textbf{regression}. 
+
+In a regression problem, we're trying to predict results with a continuous output; i.e. we are trying to map input variables to some continuous function. In a classification problem, we are instead trying to predict results with a discrete output. Let's look at some examples:
+
+\begin{description}
+\item[Regression] If we're trying to predict the price of a house given data about the house such as its size, location, etc., this is a regression problem. 
+\item[Regression] Given a picture of a person, try to predict his/her age.
+\item[Classification] Given a picture of a person, try to predict if he/she is of high school, college, or graduate age.
+\item[Classification] As a bank, decide whether or not to give a loan to a potential borrower. 
+\end{description}
+
+\section{Unsupervised Learning}
+\label{chapintro-sect:unsuplearn}
+
+Unsupervised learning allows us to approach problems with little or no idea about what our results should look like. We can try and derive structure from data where we don't necessarily know the effect of the variables. We can derive this structure by clustering the data based on relationships among the variables in the data. With unsupervised learning, there is no feedback based on the prediction results.
+
+One example of unsupervised learning is clustering. Imagine we take 1000 essays written by US college students. We can try and automatically group these essays into a smaller number that are somehow similar or related by different variables; word frequency, sentence length, page count, etc. 
+
+Here is an example of unsupervised learning that isn't clustering: the cocktail party algorithm. This is a way to find structure in messy data, such as the identification of individual voices and music from a mesh of sounds at a cocktail party.\footnote{For more information about auditory filtering, look at Wikipedia's \href{https://en.wikipedia.org/wiki/Cocktail_party_effect}{Cocktail Party Effect} article.} 
