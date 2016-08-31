@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.27)  29 AUG 2016 22:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.27)  30 AUG 2016 23:06
 entering extended mode
 **"./Coursera Machine Learning Notes.tex"
 ("Coursera Machine Learning Notes.tex"
@@ -886,7 +886,7 @@ Chapter 2.
 
 
 
-] <./Figures/linreg_eg1_plotpoints_noline.pdf, id=165, 433.62pt x 289.08pt>
+] <./Figures/linreg_eg1_plotpoints_noline.pdf, id=175, 433.62pt x 289.08pt>
 File: ./Figures/linreg_eg1_plotpoints_noline.pdf Graphic file (type pdf)
 
 <use ./Figures/linreg_eg1_plotpoints_noline.pdf>
@@ -898,7 +898,7 @@ Overfull \hbox (28.59659pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
-<./Figures/linreg_eg1_plotpoints_line1.pdf, id=166, 433.62pt x 289.08pt>
+<./Figures/linreg_eg1_plotpoints_line1.pdf, id=176, 433.62pt x 289.08pt>
 File: ./Figures/linreg_eg1_plotpoints_line1.pdf Graphic file (type pdf)
 
 <use ./Figures/linreg_eg1_plotpoints_line1.pdf>
@@ -916,7 +916,7 @@ s_line1.pdf
 pdfTeX warning: miktex-pdftex.exe (file ./Figures/linreg_eg1_plotpoints_line1.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./Figures/linreg_eg2_cost_func_over_thetas.pdf, id=217, 867.24pt x 867.24pt>
+<./Figures/linreg_eg2_cost_func_over_thetas.pdf, id=227, 867.24pt x 867.24pt>
 File: ./Figures/linreg_eg2_cost_func_over_thetas.pdf Graphic file (type pdf)
 
 <use ./Figures/linreg_eg2_cost_func_over_thetas.pdf>
@@ -940,7 +940,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
 [6] [7]
-<./Figures/linreg_eg3_why_need_feature_scaling.pdf, id=283, 433.62pt x 289.08pt
+<./Figures/linreg_eg3_why_need_feature_scaling.pdf, id=293, 433.62pt x 289.08pt
 >
 File: ./Figures/linreg_eg3_why_need_feature_scaling.pdf Graphic file (type pdf)
 
@@ -958,7 +958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  (Chapters/3-Logistic_Regression.tex
 Chapter 3.
-<./Figures/logreg_eg1_maltumor.pdf, id=351, 722.7pt x 433.62pt>
+<./Figures/logreg_eg1_maltumor.pdf, id=361, 722.7pt x 433.62pt>
 File: ./Figures/logreg_eg1_maltumor.pdf Graphic file (type pdf)
 
 <use ./Figures/logreg_eg1_maltumor.pdf>
@@ -970,7 +970,7 @@ Overfull \hbox (28.59879pt too wide) in paragraph at lines 15--16
  [][] 
  []
 
-<./Figures/logreg_eg1_maltumor_linreg1.pdf, id=352, 722.7pt x 433.62pt>
+<./Figures/logreg_eg1_maltumor_linreg1.pdf, id=362, 722.7pt x 433.62pt>
 File: ./Figures/logreg_eg1_maltumor_linreg1.pdf Graphic file (type pdf)
 
 <use ./Figures/logreg_eg1_maltumor_linreg1.pdf>
@@ -992,22 +992,22 @@ Overfull \hbox (28.59879pt too wide) in paragraph at lines 22--23
 pdfTeX warning: miktex-pdftex.exe (file ./Figures/logreg_eg1_maltumor_linreg1.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf, id=413, 722.7pt x 433.62p
+<./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf, id=423, 722.7pt x 433.62p
 t>
 File: ./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf Graphic file (type pd
 f)
  <use ./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf>
 Package pdftex.def Info: ./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf us
-ed on input line 38.
+ed on input line 39.
 (pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
 
-<./Figures/logreg_eg1_maltumor_linreg1_newpoint.pdf, id=414, 722.7pt x 433.62pt
+<./Figures/logreg_eg1_maltumor_linreg1_newpoint.pdf, id=424, 722.7pt x 433.62pt
 >
 File: ./Figures/logreg_eg1_maltumor_linreg1_newpoint.pdf Graphic file (type pdf
 )
  <use ./Figures/logreg_eg1_maltumor_linreg1_newpoint.pdf>
 Package pdftex.def Info: ./Figures/logreg_eg1_maltumor_linreg1_newpoint.pdf use
-d on input line 49.
+d on input line 50.
 (pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
  [13 <./Figures/logreg_eg1_maltumor_linreg1_threshold.pdf> <./Figures/logreg_eg
 1_maltumor_linreg1_newpoint.pdf
@@ -1015,19 +1015,114 @@ d on input line 49.
 pdfTeX warning: miktex-pdftex.exe (file ./Figures/logreg_eg1_maltumor_linreg1_n
 ewpoint.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
->] <./Figures/logreg_eg2_sigmoid_func_plot.pdf, id=476, 722.7pt x 433.62pt>
+>] <./Figures/logreg_eg2_sigmoid_func_plot.pdf, id=486, 722.7pt x 433.62pt>
 File: ./Figures/logreg_eg2_sigmoid_func_plot.pdf Graphic file (type pdf)
 
 <use ./Figures/logreg_eg2_sigmoid_func_plot.pdf>
 Package pdftex.def Info: ./Figures/logreg_eg2_sigmoid_func_plot.pdf used on inp
-ut line 78.
+ut line 79.
 (pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
- [14 <./Figures/logreg_eg2_sigmoid_func_plot.pdf>]) [15]
+ [14 <./Figures/logreg_eg2_sigmoid_func_plot.pdf>]
+<./Figures/logreg_eg3_decision_bndy_noline.pdf, id=508, 433.62pt x 433.62pt>
+File: ./Figures/logreg_eg3_decision_bndy_noline.pdf Graphic file (type pdf)
+
+<use ./Figures/logreg_eg3_decision_bndy_noline.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg3_decision_bndy_noline.pdf used on 
+input line 137.
+(pdftex.def)             Requested size: 173.44492pt x 173.44492pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15]
+<./Figures/logreg_eg3_decision_bndy_withline.pdf, id=526, 433.62pt x 433.62pt>
+File: ./Figures/logreg_eg3_decision_bndy_withline.pdf Graphic file (type pdf)
+
+<use ./Figures/logreg_eg3_decision_bndy_withline.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg3_decision_bndy_withline.pdf used o
+n input line 160.
+(pdftex.def)             Requested size: 173.44492pt x 173.44492pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./Figures/logreg_eg3_decision_bndy_noline.pdf>]
+<./Figures/logreg_eg3_decision_bndy_nonlinear_nocirc.pdf, id=548, 433.62pt x 43
+3.62pt>
+File: ./Figures/logreg_eg3_decision_bndy_nonlinear_nocirc.pdf Graphic file (typ
+e pdf)
+ <use ./Figures/logreg_eg3_decision_bndy_nonlinear_nocirc.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg3_decision_bndy_nonlinear_nocirc.pd
+f used on input line 181.
+(pdftex.def)             Requested size: 173.44492pt x 173.44492pt.
+
+<./Figures/logreg_eg3_decision_bndy_nonlinear.pdf, id=549, 433.62pt x 433.62pt>
+File: ./Figures/logreg_eg3_decision_bndy_nonlinear.pdf Graphic file (type pdf)
+<use ./Figures/logreg_eg3_decision_bndy_nonlinear.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg3_decision_bndy_nonlinear.pdf used 
+on input line 188.
+(pdftex.def)             Requested size: 173.44492pt x 173.44492pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./Figures/logreg_eg3_decision_bndy_withline.pdf>]
+<./Figures/logreg_eg4_sample_nonconvex_curve.pdf, id=572, 433.62pt x 289.08pt>
+File: ./Figures/logreg_eg4_sample_nonconvex_curve.pdf Graphic file (type pdf)
+
+<use ./Figures/logreg_eg4_sample_nonconvex_curve.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg4_sample_nonconvex_curve.pdf used o
+n input line 234.
+(pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./Figures/logreg_eg3_decision_bndy_nonlinear_nocirc.pdf> <./Figures/logreg
+_eg3_decision_bndy_nonlinear.pdf
+
+pdfTeX warning: miktex-pdftex.exe (file ./Figures/logreg_eg3_decision_bndy_nonl
+inear.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>] <./Figures/logreg_eg5_cost_func_y1.pdf, id=608, 433.62pt x 289.08pt>
+File: ./Figures/logreg_eg5_cost_func_y1.pdf Graphic file (type pdf)
+
+<use ./Figures/logreg_eg5_cost_func_y1.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg5_cost_func_y1.pdf used on input li
+ne 250.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+Overfull \hbox (28.59659pt too wide) in paragraph at lines 250--251
+ [][] 
+ []
+
+<./Figures/logreg_eg5_cost_func_y0.pdf, id=609, 433.62pt x 289.08pt>
+File: ./Figures/logreg_eg5_cost_func_y0.pdf Graphic file (type pdf)
+
+<use ./Figures/logreg_eg5_cost_func_y0.pdf>
+Package pdftex.def Info: ./Figures/logreg_eg5_cost_func_y0.pdf used on input li
+ne 257.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+Overfull \hbox (28.59659pt too wide) in paragraph at lines 257--258
+ [][] 
+ []
+
+) [19 <./Figures/logreg_eg4_sample_nonconvex_curve.pdf> <./Figures/logreg_eg5_c
+ost_func_y1.pdf
+
+pdfTeX warning: miktex-pdftex.exe (file ./Figures/logreg_eg5_cost_func_y1.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./Figures/logreg_eg5_cost_func_y0.pdf
+
+pdfTeX warning: miktex-pdftex.exe (file ./Figures/logreg_eg5_cost_func_y0.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>] [20]
 \openout2 = `./Appendix/notation.aux'.
 
  (Appendix/notation.tex
 Appendix A.
-) [16
+) [21
 
 
 
@@ -1036,7 +1131,7 @@ Appendix A.
 
  (Appendix/linear_algebra.tex
 Appendix B.
-) [17
+) [22
 
 
 
@@ -1050,7 +1145,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
 Package rerunfilecheck Info: File `"Coursera Machine Learning Notes".out' has n
 ot changed.
-(rerunfilecheck)             Checksum: F1655417407A6190DD76FBAC06ED9C2B;1665.
+(rerunfilecheck)             Checksum: 83FEB1F68A35EAB9A3719F004B9CE0F3;1831.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1058,13 +1153,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
  ) 
 Here is how much of TeX's memory you used:
- 9046 strings out of 493334
- 134659 string characters out of 3136672
- 237908 words of memory out of 3000000
- 12294 multiletter control sequences out of 15000+200000
+ 9119 strings out of 493334
+ 137150 string characters out of 3136672
+ 238398 words of memory out of 3000000
+ 12337 multiletter control sequences out of 15000+200000
  18616 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,12n,43p,607b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,651b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
@@ -1086,11 +1181,12 @@ e1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on "Coursera Machine Learning Notes.pdf" (20 pages, 488480 bytes
+blic/amsfonts/symbols/msam7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on "Coursera Machine Learning Notes.pdf" (25 pages, 580296 bytes
 ).
 PDF statistics:
- 603 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 

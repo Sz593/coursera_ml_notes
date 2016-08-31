@@ -20,6 +20,8 @@
 \contentsline {section}{\numberline {3.1}Binary Classification}{12}{section.3.1}
 \contentsline {section}{\numberline {3.2}Hypothesis Representation}{14}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Interpretation of the Logistic Hypothesis Function}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Fitting Logistic Regression to a Binary Classifier}{15}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Decision Boundary}{15}{section.3.3}
-\contentsline {chapter}{\numberline {A}Notation}{16}{appendix.A}
-\contentsline {chapter}{\numberline {B}Linear Algebra Review}{17}{appendix.B}
+\contentsline {section}{\numberline {3.4}Cost Function}{17}{section.3.4}
+\contentsline {chapter}{\numberline {A}Notation}{21}{appendix.A}
+\contentsline {chapter}{\numberline {B}Linear Algebra Review}{22}{appendix.B}
