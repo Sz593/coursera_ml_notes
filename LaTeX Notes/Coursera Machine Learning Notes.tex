@@ -38,9 +38,13 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
+\usepackage{minted}
+
 \usepackage{mdwlist} %use for single spaced lists 
 	%To single space lists, use the package ``mdwlist'' and then just use the commands ennumerate* and itemize* instead of the regular commands.
 
+\setcounter{secnumdepth}{3}	% Number sub-subsections. 
+\setcounter{tocdepth}{3}		% Make the Table of Contents go down to the sub-subsection level.
 
 % \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
@@ -130,10 +134,8 @@
 \pagenumbering{roman}
 
 
-\chapter*{Preface}\addcontentsline{toc}{chapter}{Preface}
+\include{./Chapters/Preface}
 % \ref{chapter:metricdifferentialgeometry} (Metric Differential Geometry)
-
-Hello, this is a preface. 
 
 \newpage
 \setcounter{page}{1}
@@ -143,6 +145,7 @@ Hello, this is a preface.
 \include{./Chapters/1-Introduction}
 \include{./Chapters/2-Linear_Regression}
 \include{./Chapters/3-Logistic_Regression}
+\include{./Chapters/4-Regularization}
 
 
 \appendix
