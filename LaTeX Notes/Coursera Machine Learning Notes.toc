@@ -17,24 +17,35 @@
 \contentsline {section}{\numberline {2.4}The Normal Equation}{11}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Normal Equation Noninvertibility}{11}{subsection.2.4.1}
 \contentsline {section}{\numberline {2.5}Homework}{11}{section.2.5}
-\contentsline {chapter}{\numberline {3}Logistic Regression and Regularization}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Binary Classification}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Hypothesis Representation}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Interpretation of the Logistic Hypothesis Function}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Fitting Logistic Regression to a Binary Classifier}{15}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Decision Boundary}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cost Function}{17}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Simplified Cost Function}{20}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Gradient Descent for Logistic Regression}{21}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Vectorized Equations}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Advanced Optimization}{22}{section.3.6}
-\contentsline {section}{\numberline {3.7}Multiclass Classification: One-vs-All}{22}{section.3.7}
-\contentsline {section}{\numberline {3.8}Regularization}{23}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Cost Function}{25}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Regularized Linear Regression}{26}{subsection.3.8.2}
-\contentsline {subsubsection}{\numberline {3.8.2.1}Gradient Descent}{26}{subsubsection.3.8.2.1}
-\contentsline {subsubsection}{\numberline {3.8.2.2}The Normal Equation}{27}{subsubsection.3.8.2.2}
-\contentsline {section}{\numberline {3.9}Python Labs: Coding Logistic Regression in Python}{28}{section.3.9}
-\contentsline {section}{\numberline {3.10}Homework}{28}{section.3.10}
-\contentsline {chapter}{\numberline {A}Notation}{29}{appendix.A}
-\contentsline {chapter}{\numberline {B}Linear Algebra Review}{30}{appendix.B}
+\contentsline {section}{\numberline {2.6}Python Labs: Coding Linear Regression}{18}{section.2.6}
+\contentsline {chapter}{\numberline {3}Logistic Regression and Regularization}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Binary Classification}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Hypothesis Representation}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Interpretation of the Logistic Hypothesis Function}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Fitting Logistic Regression to a Binary Classifier}{23}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Decision Boundary}{24}{section.3.3}
+\contentsline {section}{\numberline {3.4}Cost Function}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Simplified Cost Function}{28}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Gradient Descent for Logistic Regression}{29}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Vectorized Equations}{29}{section.3.5}
+\contentsline {section}{\numberline {3.6}Advanced Optimization}{30}{section.3.6}
+\contentsline {section}{\numberline {3.7}Multiclass Classification: One-vs-All}{30}{section.3.7}
+\contentsline {section}{\numberline {3.8}Regularization}{31}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Cost Function}{33}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Regularized Linear Regression}{34}{subsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.2.1}Gradient Descent}{34}{subsubsection.3.8.2.1}
+\contentsline {subsubsection}{\numberline {3.8.2.2}The Normal Equation}{35}{subsubsection.3.8.2.2}
+\contentsline {subsection}{\numberline {3.8.3}Regularized Logistic Regression}{36}{subsection.3.8.3}
+\contentsline {section}{\numberline {3.9}Python Labs: Coding Logistic Regression in Python}{37}{section.3.9}
+\contentsline {section}{\numberline {3.10}Homework}{37}{section.3.10}
+\contentsline {chapter}{\numberline {4}Neural Networks: Representation}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}Non-linear Hypotheses}{38}{section.4.1}
+\contentsline {section}{\numberline {4.2}Neurons and the Brain}{39}{section.4.2}
+\contentsline {section}{\numberline {4.3}Model Representation I}{39}{section.4.3}
+\contentsline {section}{\numberline {4.4}Model Representation II}{41}{section.4.4}
+\contentsline {section}{\numberline {4.5}Examples and Intuitions}{42}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Building Logical Gates Using Neural Networks}{44}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Logical XNOR Gate}{44}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Multiclass Classification}{45}{section.4.6}
+\contentsline {chapter}{\numberline {A}Notation}{47}{appendix.A}
+\contentsline {chapter}{\numberline {B}Linear Algebra Review}{48}{appendix.B}

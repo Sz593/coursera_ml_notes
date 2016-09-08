@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{plot\PYGZus{}data}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Training Data\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Population of City in 10,000s\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Profit in \PYGZdl{}10,000s\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{plot\PYGZus{}data}\PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Population\PYGZsq{}}\PYG{p}{],} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Profit\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

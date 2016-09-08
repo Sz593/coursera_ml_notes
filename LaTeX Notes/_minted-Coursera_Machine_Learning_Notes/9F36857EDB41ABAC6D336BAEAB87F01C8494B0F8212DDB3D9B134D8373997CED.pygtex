@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{eye}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}
+\end{Verbatim}

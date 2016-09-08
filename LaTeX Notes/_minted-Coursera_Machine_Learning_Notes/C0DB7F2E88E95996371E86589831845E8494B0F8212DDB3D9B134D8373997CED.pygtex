@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{plot\PYGZus{}cost\PYGZus{}convergence}\PYG{p}{(}\PYG{n}{J\PYGZus{}history}\PYG{p}{):}
+    \PYG{n}{abscissa} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{J\PYGZus{}history}\PYG{p}{)))}
+    \PYG{n}{ordinate} \PYG{o}{=} \PYG{n}{J\PYGZus{}history}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{abscissa}\PYG{p}{,} \PYG{n}{ordinate}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Convergence of the Cost Function\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{18}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Iteration Number\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Cost Function\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{abscissa}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{abscissa}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mf}{0.05}\PYG{p}{,} \PYG{l+m+mf}{1.05} \PYG{o}{*} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{abscissa}\PYG{p}{))}
+
+
+\PYG{n}{plot\PYGZus{}cost\PYGZus{}convergence}\PYG{p}{(}\PYG{n}{J\PYGZus{}hist}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{l+m+mf}{4.3}\PYG{p}{,} \PYG{l+m+mf}{6.9}\PYG{p}{)}
+\end{Verbatim}

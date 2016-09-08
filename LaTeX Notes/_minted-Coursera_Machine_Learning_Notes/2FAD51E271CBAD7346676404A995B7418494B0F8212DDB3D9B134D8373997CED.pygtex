@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{mpl\PYGZus{}toolkits.mplot3d} \PYG{k+kn}{import} \PYG{n}{axes3d}\PYG{p}{,} \PYG{n}{Axes3D}
+\PYG{k+kn}{from} \PYG{n+nn}{matplotlib} \PYG{k+kn}{import} \PYG{n}{cm}
+
+\PYG{n}{theta\PYGZus{}0\PYGZus{}hist} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{theta\PYGZus{}hist}\PYG{p}{]}
+\PYG{n}{theta\PYGZus{}1\PYGZus{}hist} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{theta\PYGZus{}hist}\PYG{p}{]}
+\PYG{n}{theta\PYGZus{}hist\PYGZus{}end} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{theta\PYGZus{}0\PYGZus{}hist}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}
+
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{))}
+\PYG{n}{ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{gca}\PYG{p}{(}\PYG{n}{projection}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}3d\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{theta\PYGZus{}0\PYGZus{}vals} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{theta\PYGZus{}1\PYGZus{}vals} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+
+\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{,} \PYG{n}{cost} \PYG{o}{=} \PYG{p}{[],} \PYG{p}{[],} \PYG{p}{[]}
+
+\PYG{k}{for} \PYG{n}{t0} \PYG{o+ow}{in} \PYG{n}{theta\PYGZus{}0\PYGZus{}vals}\PYG{p}{:}
+    \PYG{k}{for} \PYG{n}{t1} \PYG{o+ow}{in} \PYG{n}{theta\PYGZus{}1\PYGZus{}vals}\PYG{p}{:}
+        \PYG{n}{theta1}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{t0}\PYG{p}{)}
+        \PYG{n}{theta2}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{t1}\PYG{p}{)}
+        \PYG{n}{theta\PYGZus{}array} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{t0}\PYG{p}{],} \PYG{p}{[}\PYG{n}{t1}\PYG{p}{]])}
+        \PYG{n}{cost}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{compute\PYGZus{}cost}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{theta\PYGZus{}array}\PYG{p}{))}
+
+\PYG{n}{scat} \PYG{o}{=} \PYG{n}{ax}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{theta1}\PYG{p}{,} \PYG{n}{theta2}\PYG{p}{,} \PYG{n}{cost}\PYG{p}{,}
+                  \PYG{n}{c}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{cost}\PYG{p}{),} \PYG{n}{cmap}\PYG{o}{=}\PYG{n}{plt}\PYG{o}{.}\PYG{n}{get\PYGZus{}cmap}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}rainbow\PYGZsq{}}\PYG{p}{))}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta\PYGZus{}0\PYGZus{}hist}\PYG{p}{,} \PYG{n}{theta\PYGZus{}1\PYGZus{}hist}\PYG{p}{,} \PYG{n}{J\PYGZus{}hist}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{,}
+         \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Cost Minimization Path\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta\PYGZus{}0\PYGZus{}hist}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{theta\PYGZus{}1\PYGZus{}hist}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{J\PYGZus{}hist}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s+s1}{\PYGZsq{}ro\PYGZsq{}}\PYG{p}{,}
+         \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Cost Minimization Start\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{theta\PYGZus{}0\PYGZus{}hist}\PYG{p}{[}\PYG{n}{theta\PYGZus{}hist\PYGZus{}end}\PYG{p}{],}
+         \PYG{n}{theta\PYGZus{}1\PYGZus{}hist}\PYG{p}{[}\PYG{n}{theta\PYGZus{}hist\PYGZus{}end}\PYG{p}{],}
+         \PYG{n}{J\PYGZus{}hist}\PYG{p}{[}\PYG{n}{theta\PYGZus{}hist\PYGZus{}end}\PYG{p}{],} \PYG{l+s+s1}{\PYGZsq{}co\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Cost Minimization Finish\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{r\PYGZsq{}\PYGZdl{}\PYGZbs{}theta\PYGZus{}0\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{24}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{r\PYGZsq{}\PYGZdl{}\PYGZbs{}theta\PYGZus{}1\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{24}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{r\PYGZsq{}Cost Function Minimization\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{24}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+\end{Verbatim}

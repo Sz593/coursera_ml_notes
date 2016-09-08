@@ -337,7 +337,258 @@ We typically avoid this problem by coding a pseudoinverse, instead of taking the
 
 \section{Homework}
 
+\subsection*{Introduction}
+In this exercise, you will implement linear regression and get to see it work on data. Before starting on this programming exercise, we strongly recommend watching the video lectures and completing the review questions for the associated topics. To get started with the exercise, you will need to download the starter code and unzip its contents to the directory where you wish to complete the exercise. If needed, use the cd command in Octave/MATLAB to change to this directory before starting this exercise. You can also find instructions for installing Octave/MATLAB in the Environment Setup Instructions" of the course website. \\
 
+To start our code, we'll need to import a few modules that we'll be using.
+
+\begin{minted}{python}
+import numpy as np
+import pandas as pd
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+%matplotlib inline	# Use this if you're using Jupyter Notebooks
+\end{minted}
+
+
+\subsubsection*{Simple Octave/MATLAB Function}
+The first part of {\texttt ex1.m} gives you practice with Octave/MATLAB syntax and the homework submission process. In the file {\texttt warmUpExercise.m}, you will find the outline of an Octave/MATLAB function. Modify it to return a 5 x 5 identity matrix.
+
+\begin{minted}{python}
+A = np.eye(5)
+print(A)
+\end{minted}
+
+
+\subsection*{Linear Regression with One Variable}
+In this part of this exercise, you will implement linear regression with one variable to predict profits for a food truck. Suppose you are the CEO of a restaurant franchise and are considering different cities for opening a new outlet. The chain already has trucks in various cities and you have data for profits and populations from the cities. You would like to use this data to help you select which city to expand to next.
+
+\subsubsection*{Plotting the Data}
+Before starting on any task, it is often useful to understand the data by visualizing it. For this dataset, you can use a scatter plot to visualize the data, since it has only two properties to plot (profit and population). (Many other problems that you will encounter in real life are multi-dimensional and can't be plotted on a 2-d plot.)
+
+We start by loading the data
+\begin{minted}{python}
+datafile = 'ex1\\ex1data1.txt'
+df = pd.read_csv(datafile, header=None, names=['Population', 'Profit'])
+\end{minted}
+
+Then we define a function to plot the data and call this function.
+\begin{minted}{python}
+def plot_data(x, y):
+    plt.figure(figsize=(10, 6))
+    plt.plot(x, y, '.', label='Training Data')
+    plt.xlabel("Population of City in 10,000s")
+    plt.ylabel("Profit in $10,000s")
+
+plot_data(df['Population'], df['Profit'])
+\end{minted}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+	\centering
+	\graphicspath{{./Figures/}} %Use this to import an image from a subfolder.
+	\includegraphics[scale=0.5]{linreg_hw_2_1_plot_data.pdf} 
+%	\caption[]{One-vs-all classification. We're selecting one class to be our positive class, and the rest all become the negative class.}
+	\label{linreg_hw_2_1_plot_data.pdf}
+\end{figure}
+
+\subsection*{Gradient Descent}
+In this part, you will fit the linear regression parameters $\theta$ to our dataset using gradient descent.
+
+\subsection*{Update Equations}
+The objective of linear regression is to minimize the cost function
+$$
+J\left( \theta \right) = \frac{1}{2m} \sum_{i=1}^m \left( h_\theta \left( x^{\left( i\right)} \right) - y^{\left( i \right)} \right)^2
+$$
+where $h_\theta\left( x \right)$ is the hypothesis given by the linear model
+$$
+h_\theta\left( x \right) = \theta^\intercal x = \theta_0 + \theta_1 x_1
+$$
+Recall that the parameters of your model are the $\theta_j$ values. These are the values you will adjust to minimize cost $J(\theta)$. One way to do this is to use the batch gradient descent algorithm. In batch gradient descent, each iteration performs the update
+$$
+\theta_j := \theta_j - \alpha\frac{1}{m}\sum_{i=1}^m \left( h_\theta\left( x^{\left( i\right)} \right) - y^{\left(i\right)}\right) x_j^{\left(i\right)} \;\;\;\;\;\;\;\;\;\; \text{simultaneously update } \theta_j \text{ for all } j \text{.}
+$$
+With each step of gradient descent, your parameters $\theta_j$ come closer to the optimal values that will achieve the lowest cost $J(\theta)$.
+
+\subsection*{Implementation}
+In the following lines, we add another dimension to our data to accommodate the $\theta_0$ intercept term.
+
+\begin{minted}{python}
+# set the number of training examples
+m = len(df['Population'])
+
+# create an array from the dataframe (missing column for x_0 values)
+X = df['Population'].values
+
+# add in the first column of the array for x_0 values
+X = X[:, np.newaxis]
+X = np.insert(X, 0, 1, axis=1)
+
+y = df['Profit'].values
+y = y[:, np.newaxis]
+\end{minted}
+
+\subsection*{Computing the Cost $J\left(\theta\right)$}
+Now, we can define our actual hypothesis function for linear regression with a single variable. 
+\begin{minted}{python}
+# define the hypothesis
+def h(theta, X):
+    """Takes the dot product of the matrix X and the vector theta,
+    yielding a predicted result.
+    """
+    return np.dot(X, theta)
+
+
+def compute_cost(X, y, theta):
+    """Takes the design matrix X and output vector y, and computes the cost of
+    the parameters stored in the vector theta.
+    
+    The dimensions must be as follows:
+    - X must be m x n
+    - y must be m x 1
+    - theta must be n x 1
+    
+    """
+    m = len(y)
+    
+    J = 1 / (2*m) * np.dot((np.dot(X, theta) - y).T, (np.dot(X, theta) - y))
+    return J
+\end{minted}
+
+
+Once you have completed the function, the next step % {\texttt compute_cost} 
+once using $\theta$  initialized to zeros, and you will see the cost printed to the screen. You should expect to see a cost of 32.07.
+
+\begin{minted}{python}
+# define column vector theta = [[0], [0]]
+theta = np.zeros((2, 1))
+
+# compute the cost function for our existing X and y, with our new theta vector
+# verify that the cost for our theta of zeros is 32.07
+compute_cost(X, y, theta)
+\end{minted}
+
+This gives us our expected value of $32.07273388$.
+
+\subsection*{Gradient Descent}
+Now we'll actually implement the gradient descent algorithm. Keep in mind that the cost $J(\theta)$ is parameterized by the vector $\theta$, not $X$ and $y$. That is, we minimize $J(\theta)$ by changing $\theta$. We initialize the initial parameters to 0 and the learning rate alpha to 0.01.
+
+\begin{minted}{python}
+def gradient_descent(X, y, theta, alpha, num_iters):
+    m = len(y)
+    J_history = []
+    theta_history = []
+    
+    for i in range(num_iters):
+        J_history.append(float(compute_cost(X, y, theta)))
+        theta_history.append(theta)
+        theta = theta - (alpha / m) * np.dot(X.T, (np.dot(X, theta) - y))
+    
+    return theta, J_history, theta_history
+
+
+# set up some initial parameters for gradient descent
+theta_initial = np.zeros((2, 1))
+iterations = 1500
+alpha = 0.01
+
+
+# run our gradient descent function
+theta_final, J_hist, theta_hist = gradient_descent(X, y, 
+                                                   theta_initial, 
+                                                   alpha, iterations)
+
+\end{minted}
+
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+	\centering
+	\graphicspath{{./Figures/}} %Use this to import an image from a subfolder.
+	\includegraphics[scale=0.5]{linreg_hw_2_3_plot_lin_reg.pdf} 
+%	\caption[]{One-vs-all classification. We're selecting one class to be our positive class, and the rest all become the negative class.}
+	\label{linreg_hw_2_3_plot_lin_reg.pdf}
+\end{figure}
+
+
+\subsection*{Visualizing $J\left(\theta\right)$}
+After running the batch gradient descent algorithm, we can plot the convergence of $J\left(\theta\right)$ over the number of iterations.
+\begin{minted}{python}
+def plot_cost_convergence(J_history):
+    abscissa = list(range(len(J_history)))
+    ordinate = J_history
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(abscissa, ordinate, '.')
+    plt.title('Convergence of the Cost Function', fontsize=18)
+    plt.xlabel('Iteration Number', fontsize=14)
+    plt.ylabel('Cost Function', fontsize=14)
+    plt.xlim(min(abscissa) - max(abscissa) * 0.05, 1.05 * max(abscissa))
+
+
+plot_cost_convergence(J_hist)
+plt.ylim(4.3, 6.9)
+\end{minted}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+	\centering
+	\graphicspath{{./Figures/}} %Use this to import an image from a subfolder.
+	\includegraphics[scale=0.5]{linreg_hw_2_4_viz_j_of_theta.pdf} 
+%	\caption[]{One-vs-all classification. We're selecting one class to be our positive class, and the rest all become the negative class.}
+	\label{linreg_hw_2_4_viz_j_of_theta.pdf}
+\end{figure}
+
+Now, let's plot the cost minimization on the surface of $J\left(\theta\right)$. 
+
+\begin{minted}{python}
+from mpl_toolkits.mplot3d import axes3d, Axes3D
+from matplotlib import cm
+
+theta_0_hist = [x[0] for x in theta_hist]
+theta_1_hist = [x[1] for x in theta_hist]
+theta_hist_end = len(theta_0_hist) - 1
+
+fig = plt.figure(figsize=(12, 12))
+ax = fig.gca(projection='3d')
+
+theta_0_vals = np.linspace(-10, 10, 100)
+theta_1_vals = np.linspace(-1, 4, 100)
+
+theta1, theta2, cost = [], [], []
+
+for t0 in theta_0_vals:
+    for t1 in theta_1_vals:
+        theta1.append(t0)
+        theta2.append(t1)
+        theta_array = np.array([[t0], [t1]])
+        cost.append(compute_cost(X, y, theta_array))
+
+scat = ax.scatter(theta1, theta2, cost, 
+                  c=np.abs(cost), cmap=plt.get_cmap('rainbow'))
+
+plt.plot(theta_0_hist, theta_1_hist, J_hist, 'r',
+         label='Cost Minimization Path')
+plt.plot(theta_0_hist[0], theta_1_hist[0], J_hist[0], 'ro',
+         label='Cost Minimization Start')
+plt.plot(theta_0_hist[theta_hist_end],
+         theta_1_hist[theta_hist_end],
+         J_hist[theta_hist_end], 'co', label='Cost Minimization Finish')
+
+plt.xlabel(r'$\theta_0$', fontsize=24)
+plt.ylabel(r'$\theta_1$', fontsize=24)
+plt.title(r'Cost Function Minimization', fontsize=24)
+plt.legend()
+\end{minted}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+	\centering
+	\graphicspath{{./Figures/}} %Use this to import an image from a subfolder.
+	\includegraphics[scale=0.5]{linreg_hw_2_4_plot_surface_plot.pdf} 
+%	\caption[]{One-vs-all classification. We're selecting one class to be our positive class, and the rest all become the negative class.}
+	\label{linreg_hw_2_4_plot_surface_plot.pdf}
+\end{figure}
+
+\section{Python Labs: Coding Linear Regression}
 
 
 

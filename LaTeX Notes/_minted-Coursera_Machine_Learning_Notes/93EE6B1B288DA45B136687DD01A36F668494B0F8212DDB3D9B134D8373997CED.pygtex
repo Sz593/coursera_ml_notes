@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{datafile} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}ex1}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{ex1data1.txt\PYGZsq{}}
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{n}{datafile}\PYG{p}{,} \PYG{n}{header}\PYG{o}{=}\PYG{n+nb+bp}{None}\PYG{p}{,} \PYG{n}{names}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Population\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Profit\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}
